@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yHO-uq-eeA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cX6-Kw-exu">
+            <objects>
+                <navigationController id="yHO-uq-eeA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEa-Fd-gYM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pq-8z-aNL" kind="relationship" relationship="rootViewController" id="BMu-2R-g1b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVQ-Db-Dgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="-646"/>
+        </scene>
+        <!--Photo UploaderVC-->
+        <scene sceneID="nWm-Bn-bh4">
+            <objects>
+                <viewController restorationIdentifier="PhotoUploaderVC" storyboardIdentifier="PhotoUploaderVC" id="9pq-8z-aNL" customClass="PhotoUploaderVC" customModule="Photo_Uploader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sm6-bG-zhI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-uq-Jbf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="56" id="nW9-OK-dOa" customClass="PhotoCell" customModule="Photo_Uploader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nW9-OK-dOa" id="qCm-rR-bLy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="osn-aC-ycd">
+                                                    <rect key="frame" x="8" y="8" width="42" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="glX-tq-8la"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwY-cJ-ACD">
+                                                    <rect key="frame" x="58" y="8" width="348" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rwY-cJ-ACD" secondAttribute="bottom" constant="8" id="Ceh-S6-gUz"/>
+                                                <constraint firstAttribute="bottom" secondItem="osn-aC-ycd" secondAttribute="bottom" constant="8" id="Uiw-DM-hwd"/>
+                                                <constraint firstItem="osn-aC-ycd" firstAttribute="leading" secondItem="qCm-rR-bLy" secondAttribute="leading" constant="8" id="VPa-RR-wEd"/>
+                                                <constraint firstItem="osn-aC-ycd" firstAttribute="top" secondItem="qCm-rR-bLy" secondAttribute="top" constant="8" id="ecC-rC-ghZ"/>
+                                                <constraint firstItem="rwY-cJ-ACD" firstAttribute="leading" secondItem="osn-aC-ycd" secondAttribute="trailing" constant="8" id="hNS-87-4oq"/>
+                                                <constraint firstAttribute="trailing" secondItem="rwY-cJ-ACD" secondAttribute="trailing" constant="8" id="p7I-Hz-6au"/>
+                                                <constraint firstItem="rwY-cJ-ACD" firstAttribute="top" secondItem="qCm-rR-bLy" secondAttribute="top" constant="8" id="uPu-B5-SJv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="osn-aC-ycd" id="qii-Xe-RSd"/>
+                                            <outlet property="photoNameLabel" destination="rwY-cJ-ACD" id="5VI-nP-eZT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pq-8z-aNL" id="8r1-Qj-acX"/>
+                                    <outlet property="delegate" destination="9pq-8z-aNL" id="7o0-ae-aQN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vn4-uq-Jbf" firstAttribute="top" secondItem="tNe-TV-mra" secondAttribute="top" id="GDu-b3-f9V"/>
+                            <constraint firstItem="tNe-TV-mra" firstAttribute="trailing" secondItem="Vn4-uq-Jbf" secondAttribute="trailing" id="OW0-DX-P1E"/>
+                            <constraint firstItem="Vn4-uq-Jbf" firstAttribute="leading" secondItem="tNe-TV-mra" secondAttribute="leading" id="Xdf-yV-JQp"/>
+                            <constraint firstItem="tNe-TV-mra" firstAttribute="bottom" secondItem="Vn4-uq-Jbf" secondAttribute="bottom" id="lM5-22-KCo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tNe-TV-mra"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RcI-ca-9UT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eH0-v6-0ev">
+                            <connections>
+                                <action selector="addDidTap:" destination="9pq-8z-aNL" id="SZQ-pI-a6O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Vn4-uq-Jbf" id="viB-gD-BGO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7p-kx-AHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="-646.20535714285711"/>
+        </scene>
+    </scenes>
+</document>
